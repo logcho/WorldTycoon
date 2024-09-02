@@ -16,10 +16,9 @@ export default function Home() {
       <div className="flex flex-col justify-center items-center w-screen h-screen bg-[url('/img/map_0.png')]">
         <div className={jersey.className}>
 
-          <h1 className="text-8xl text-amber-200">
-            Profile
-          </h1> 
-
+            <h1 className="text-8xl text-amber-200">
+                cities
+            </h1> 
 
           
         </div>
@@ -47,15 +46,23 @@ function Header() {
               </Link>
             </Button>
             <Button className="text-4xl">
-              Profile
+              <Link href="/profile">
+                  Profile
+              </Link>
             </Button>
         </div>
       </div>
       <div className="flex flex-col justify-center">
-        <ConnectButton
-          client={client}
-        />
-      </div>        
+          <ConnectButton
+            client={client}
+            connectButton={{
+              style: {
+                fontSize: "28px",
+                fontFamily: jersey.style.fontFamily,
+              },
+            }}
+          />
+        </div>
     </header>
   )
 }

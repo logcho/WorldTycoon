@@ -28,7 +28,9 @@ export default function Home() {
 
           <div className="flex justify-center p-2">
             <Button className="text-4xl w-28">
-              Bridge
+              <Link href="/bridge">
+                Bridge
+              </Link>
             </Button>
           </div>
 
@@ -48,23 +50,33 @@ function Header() {
       <div className="flex flex-col justify-center">
         <div className={jersey.className}>
             <Button className="text-4xl">
-                <Link href="/profile">
+                <Link href="/">
                     Home
                 </Link>
             </Button>
             <Button className="text-4xl">
-              Cities
+              <Link href="/cities">
+                Cities
+              </Link>
             </Button>
             <Button className="text-4xl">
-              Profile
+              <Link href="/profile">
+                  Profile
+              </Link>
             </Button>
         </div>
       </div>
       <div className="flex flex-col justify-center">
-        <ConnectButton
-          client={client}
-        />
-      </div>        
+          <ConnectButton
+            client={client}
+            connectButton={{
+              style: {
+                fontSize: "28px",
+                fontFamily: jersey.style.fontFamily,
+              },
+            }}
+          />
+        </div>
     </header>
   )
 }
