@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "WorldTycoon",
   description:
-    "Web3 Game",
+    "OnChain Micropolis",
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <ThirdwebProvider>{children}</ThirdwebProvider>
       </body>
     </html>

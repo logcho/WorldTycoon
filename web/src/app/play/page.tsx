@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link"
 import { ConnectButton } from "thirdweb/react";
 import thirdwebIcon from "@public/thirdweb.svg";
-import { client } from "./client";
+import { client } from "../client";
 import { Button } from "@/components/ui/button";
 
 import localFont from "next/font/local";
-const jersey = localFont({src: "./Jersey_10/Jersey10-Regular.ttf"});
+const jersey = localFont({src: "../Jersey_10/Jersey10-Regular.ttf"});
 
 export default function Home() {
   return (
@@ -16,25 +16,9 @@ export default function Home() {
       <div className="flex flex-col justify-center items-center w-screen h-screen bg-[url('/img/map_0.png')]">
         <div className={jersey.className}>
 
-          <h1 className="text-8xl text-amber-200">
-            WorldTycoon
-          </h1> 
-
-          <div className="flex justify-center p-2">
-            <Button className="text-4xl w-28">
-              <Link href="/play">
-                Play
-              </Link>
-            </Button>
-          </div>
-
-          <div className="flex justify-center p-2">
-            <Button className="text-4xl w-28">
-              <Link href="/bridge">
-                Bridge
-              </Link>
-            </Button>
-          </div>
+            <h1 className="text-8xl text-amber-200">
+                play
+            </h1> 
 
           
         </div>
