@@ -6,6 +6,7 @@ import thirdwebIcon from "@public/thirdweb.svg";
 import { client } from "./client";
 import { Button } from "@/components/ui/button";
 
+
 import localFont from "next/font/local";
 const jersey = localFont({src: "./Jersey_10/Jersey10-Regular.ttf"});
 

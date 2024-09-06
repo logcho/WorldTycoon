@@ -21,8 +21,11 @@ import {
     TabsList,
     TabsTrigger,
   } from "@/components/ui/tabs"
+  import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+
 
 import localFont from "next/font/local";
+import { Fallback } from "@radix-ui/react-avatar";
 const jersey = localFont({src: "../Jersey_10/Jersey10-Regular.ttf"});
 
 export default function Home() {
@@ -31,7 +34,7 @@ export default function Home() {
       <Header />
       <div className="flex flex-col justify-center items-center w-screen h-screen bg-[url('/img/map_0.png')]">
         {/* <div className={jersey.className}> */}
-          <Tabs defaultValue="deposit" className="w-[400px]">
+          <Tabs defaultValue="deposit" className="md:w-[500px] w-72">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="deposit">Deposit</TabsTrigger>
               <TabsTrigger value="withdraw">Withdraw</TabsTrigger>
@@ -39,7 +42,49 @@ export default function Home() {
             <TabsContent value="deposit">
               <Card>
                 <CardHeader>
-                  {/* <CardTitle>Deposit</CardTitle> */}
+                  {/* icon 1 */}
+                  <div className="grid grid-cols-3">
+                    <div className="flex flex-row w-full gap-x-1 justify-start">
+                      <Avatar>
+                        <AvatarImage src="/img/base_icon.svg" alt="base_icon"/>
+                      </Avatar>
+                      <div className="flex flex-col justify-center text-left w-full">
+                        <h1 className="text-sm">
+                          From
+                        </h1>
+                        <h2 className="text-sm font-bold">
+                          Base Sepolia
+                          {/* replace with chain name  */}
+                        </h2>
+                      </div>
+                    </div>
+
+                    {/* arrow  */}
+                    <div className="flex flex-row justify-center">
+                      <div className="flex flex-col justify-center">
+                        <h1 className="text-2xl">
+                          →
+                        </h1>
+
+                      </div>
+                    </div>
+
+                    {/* icon 2 */}
+                    <div className="flex flex-row w-full gap-x-1 justify-end">
+                      <div className="flex flex-col justify-center text-right w-full">
+                        <h1 className="text-sm">
+                          To
+                        </h1>
+                        <h2 className="text-sm font-bold">
+                          Base Sepolia
+                          {/* replace with chain name  */}
+                        </h2>
+                      </div>
+                      <Avatar>
+                        <AvatarImage src="/img/base_icon.svg" alt="base_icon"/>
+                      </Avatar>
+                    </div>
+                  </div>
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <div className="bg-slate-100 p-2 rounded-sm	">
@@ -66,7 +111,50 @@ export default function Home() {
             <TabsContent value="withdraw">
               <Card>
                 <CardHeader>
-                  {/* <CardTitle>Withdraw</CardTitle> */}
+                  {/* icon 1 */}
+                  <div className="grid grid-cols-3">
+                    <div className="flex flex-row w-full gap-x-1 justify-start">
+                      <Avatar>
+                        <AvatarImage src="/img/base_icon.svg" alt="base_icon"/>
+                      </Avatar>
+                      <div className="flex flex-col justify-center text-left w-full">
+                        <h1 className="text-sm">
+                          From
+                        </h1>
+                        <h2 className="text-sm font-bold">
+                          Base Sepolia
+                          {/* replace with chain name  */}
+                        </h2>
+                      </div>
+                    </div>
+
+                    {/* arrow  */}
+                    <div className="flex flex-row justify-center">
+                      <div className="flex flex-col justify-center">
+                        <h1 className="text-2xl">
+                          →
+                        </h1>
+
+                      </div>
+                    </div>
+
+                    {/* icon 2 */}
+                    <div className="flex flex-row w-full gap-x-1 justify-end">
+                      <div className="flex flex-col justify-center text-right w-full">
+                        <h1 className="text-sm">
+                          To
+                        </h1>
+                        <h2 className="text-sm font-bold">
+                          Base Sepolia
+                          {/* replace with chain name  */}
+                        </h2>
+                      </div>
+                      <Avatar>
+                        <AvatarImage src="/img/base_icon.svg" alt="base_icon"/>
+                      </Avatar>
+                    </div>
+                  </div>
+                  
                 </CardHeader>
                 <CardContent className="space-y-2">
                 <div className="bg-slate-100 p-2 rounded-sm	">
@@ -85,7 +173,7 @@ export default function Home() {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Button>Confirm</Button>
+                  <Button className="w-full">Confirm</Button>
                 </CardFooter>
               </Card>
             </TabsContent>
